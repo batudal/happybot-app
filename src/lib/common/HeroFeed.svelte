@@ -1,6 +1,24 @@
-<script>
+<script lang="ts">
 	import Button from './Button.svelte';
 	import Token from './Token.svelte';
+	import { browser } from '$app/environment';
+
+	export let latest_tokens: any;
+	let tokens: any[] = [];
+	$: reverse_tokens = [...tokens].reverse();
+
+	if (browser) {
+		const socket = new WebSocket('ws://localhost/wss');
+		socket.addEventListener('open', () => {
+			console.log('connected');
+		});
+		socket.onmessage = function (event) {
+			console.log(event.data);
+			let deployed_token = JSON.parse(event.data);
+			tokens.push(deployed_token);
+			tokens = [...tokens];
+		};
+	}
 </script>
 
 <div class="relative w-[632px] h-[512px] bg-happy-light border-4 border-happy-black rounded-[24px]">
@@ -23,11 +41,14 @@
 	</div>
 	<div class="p-6 pb-0 h-[448px] overflow-y-hidden flex">
 		<div class="w-full flex flex-col gap-4">
-			<Token />
-			<Token />
-			<Token />
-			<Token />
-			<Token />
+			{#if reverse_tokens && reverse_tokens.length > 0}
+				{#each reverse_tokens as token}
+					<Token {token} />
+				{/each}
+			{/if}
+			{#each latest_tokens as token}
+				<Token {token} />
+			{/each}
 		</div>
 	</div>
 </div>

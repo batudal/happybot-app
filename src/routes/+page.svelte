@@ -2,6 +2,7 @@
 	import HeroFeed from '$lib/common/HeroFeed.svelte';
 	import HeroInfo from '$lib/common/HeroInfo.svelte';
 	import Navbar from '$lib/common/Navbar.svelte';
+	export let data: any;
 </script>
 
 <svelte:head>
@@ -16,6 +17,6 @@
 	<div class="h-[32px]" />
 	<div class="max-w-[1320px] w-full flex flex-row items-center justify-between pb-24">
 		<HeroInfo />
-		<HeroFeed />
+		<HeroFeed latest_tokens={data.tokens} />
 	</div>
 </div>
