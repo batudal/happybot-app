@@ -3,5 +3,39 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Space-Mono', monospace;
+  font-family: 'Space Mono', monospace;
+  overflow: hidden;
+}
+
+.background {
+  background-image: url('./bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+h1{
+letter-spacing: -0.2rem;
+}
+
+.tight{
+  letter-spacing: -0.075rem;
+}
+
+.button {
+  transition: transform 0.2s ease; /* Adding transition for smooth animation */
+}
+
+.button:active {
+  transform: translate(4px, 4px); /* Move 4 pixels on both x and y-axis */
+}
+
+.blink {
+  animation: blink 1.5s linear infinite;
+}
+
+@keyframes blink {
+  90% {
+  opacity: 0.25;
+  }
 }

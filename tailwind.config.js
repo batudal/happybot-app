@@ -8,9 +8,16 @@ export default {
     extend: {
       colors: {
         happy: {
-          light_blue: '#81CEE6',
           dark: '#1E1E1E',
           light: '#FFF6DC',
+          yellow: '#FFDD02',
+          yellow_dark: '#F4D400',
+          black: '#000000',
+          red: '#FA4238',
+          green: '#00CE7C',
+          light_blue: '#81CEE6',
+          light_pink: '#F58B9F',
+          light_green: '#C7FDA9',
 
         },
       }
