@@ -9,6 +9,7 @@
 		src="./card_bg.svg"
 		alt="Green card background"
 		class="absolute bottom-[-4px] right-[-4px]"
+		draggable="false"
 	/>
 	<img
 		src="./badges/binance_badge.svg"

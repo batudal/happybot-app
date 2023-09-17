@@ -18,6 +18,7 @@ export default {
           light_blue: '#81CEE6',
           light_pink: '#F58B9F',
           light_green: '#C7FDA9',
+          purple: '#9747FF',
 
         },
       }

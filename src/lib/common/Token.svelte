@@ -1,6 +1,9 @@
 <script lang="ts">
 	import Tag from './Tag.svelte';
 	export let token: any;
+	$: if (token.token.name.length > 12) {
+		token.token.name = token.token.name.slice(0, 12) + '...';
+	}
 </script>
 
 <div class="flex">
@@ -10,16 +13,26 @@
 		>
 			<div class="flex flex-col justify-start uppercase">
 				<h3 class="text-2xl font-bold text-happy-dark line-clamp-1">{token.token.name}</h3>
-				<p class="text-base text-happy-dark font-bold">block #23452351</p>
+				{#if token.pool.pool_address == undefined}
+					<p class="text-base text-happy-dark font-bold">erc20 deployed</p>
+				{:else}
+					<p class="text-base text-happy-dark font-bold">pool created</p>
+				{/if}
 			</div>
 			<div class="flex flex-row gap-3">
-				{#if token.verified}
+				{#if token.verified || token.contract_abi != undefined}
 					<Tag text="verified" color="bg-happy-light_pink" />
 				{/if}
 				{#if token.simulation_result.success}
 					<Tag text="simulated" color="bg-happy-light_green" />
+				{:else if token.pool.pool_address != undefined}
+					<Tag text="liquid" color="bg-happy-light_green" />
 				{/if}
-				<Tag text="deployed" color="bg-happy-light_blue" />
+				{#if token.method_name != 'N/A'}
+					<Tag text="snipeable" color="bg-happy-light" />
+				{:else}
+					<Tag text="deployed" color="bg-happy-light_blue" />
+				{/if}
 			</div>
 		</div>
 		<div
