@@ -9,13 +9,13 @@
 	<title>happybot</title>
 </svelte:head>
 <div
-	class="relative w-full background flex flex-col items-center"
+	class="relative w-full background flex flex-col items-center overflow-y-scroll"
 	style="height:100vh; background-image: url('./bg.svg')"
 >
-	<div class="h-[32px]" />
-	<Navbar />
-	<div class="h-[32px]" />
-	<div class="max-w-[1320px] w-full flex flex-row items-center justify-between pb-24">
+	<div class="py-8 w-full flex flex-col items-center">
+		<Navbar />
+	</div>
+	<div class="max-w-[1320px] w-full flex flex-col lg:flex-row items-center gap-14 pb-24">
 		<HeroInfo />
 		<HeroFeed latest_tokens={data.tokens} />
 	</div>
