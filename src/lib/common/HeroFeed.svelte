@@ -2,14 +2,15 @@
 	import Button from './Button.svelte';
 	import Token from './Token.svelte';
 	import { browser } from '$app/environment';
-	import { env } from '$env/dynamic/private';
+	import { env } from '$env/dynamic/public';
 
 	export let latest_tokens: any;
 	let tokens: any[] = [];
 	$: reverse_tokens = [...tokens].reverse();
+	//c
 
 	if (browser) {
-		const socket = new WebSocket(`${env.PRIVATE_WSS_URL}/wss`);
+		const socket = new WebSocket(`${env.PUBLIC_WSS_URL}/wss`);
 		socket.onmessage = function (event) {
 			let deployed_token = JSON.parse(event.data);
 			tokens.push(deployed_token);
