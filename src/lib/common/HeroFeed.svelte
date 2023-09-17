@@ -5,16 +5,18 @@
 	import { env } from '$env/dynamic/public';
 	import { flip } from 'svelte/animate';
 
+	let counter = 0;
 	export let latest_tokens: any;
 	let tokens: any[] = [];
-	$: reverse_tokens = [...tokens].reverse();
 
 	if (browser) {
+		tokens = [...latest_tokens];
 		const socket = new WebSocket(`${env.PUBLIC_WSS_URL}/wss`);
 		socket.onmessage = function (event) {
 			let deployed_token = JSON.parse(event.data);
-			tokens.push(deployed_token);
-			tokens = [...tokens];
+			deployed_token.id = counter++;
+			tokens = [deployed_token, ...tokens];
+			tokens = tokens;
 		};
 	}
 </script>
@@ -43,13 +45,8 @@
 		</div>
 		<div class="p-6 pb-0 h-[436px] overflow-y-hidden flex">
 			<div class="w-full flex flex-col gap-4">
-				{#if reverse_tokens && reverse_tokens.length > 0}
-					{#each reverse_tokens as token}
-						<Token {token} />
-					{/each}
-				{/if}
-				{#each latest_tokens as token (token._id)}
-					<div animate:flip>
+				{#each tokens as token (token.id)}
+					<div animate:flip={{ duration: 200 }}>
 						<Token {token} />
 					</div>
 				{/each}
