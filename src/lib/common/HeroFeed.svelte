@@ -3,11 +3,11 @@
 	import Token from './Token.svelte';
 	import { browser } from '$app/environment';
 	import { env } from '$env/dynamic/public';
+	import { flip } from 'svelte/animate';
 
 	export let latest_tokens: any;
 	let tokens: any[] = [];
 	$: reverse_tokens = [...tokens].reverse();
-	//c
 
 	if (browser) {
 		const socket = new WebSocket(`${env.PUBLIC_WSS_URL}/wss`);
@@ -48,8 +48,10 @@
 						<Token {token} />
 					{/each}
 				{/if}
-				{#each latest_tokens as token}
-					<Token {token} />
+				{#each latest_tokens as token (token._id)}
+					<div animate:flip>
+						<Token {token} />
+					</div>
 				{/each}
 			</div>
 		</div>
