@@ -12,11 +12,11 @@
 		<a href="https://t.me/happy_tg_bot" target="_blank" draggable="false">
 			<IconButton image="./icons/telegram.svg" alt="Telegram" />
 		</a>
-		<a href="https://x.com/happybotwtf" target="_blank" draggable="false">
+		<a href="https://x.com/happybotlol" target="_blank" draggable="false">
 			<IconButton image="./icons/twitter.svg" alt="Twitter" />
 		</a>
 
-		<a href="https://docs.happybot.wtf" target="_blank" draggable="false">
+		<a href="https://docs.happybot.lol" target="_blank" draggable="false">
 			<Button text="docs" />
 		</a>
 		<div class="relative">
