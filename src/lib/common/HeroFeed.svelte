@@ -4,6 +4,7 @@
 	import { browser } from '$app/environment';
 	import { env } from '$env/dynamic/public';
 	import { flip } from 'svelte/animate';
+	import { fly } from 'svelte/transition';
 
 	let counter = 0;
 	export let latest_tokens: any;
@@ -46,7 +47,7 @@
 		<div class="p-6 pb-0 h-[436px] overflow-y-hidden flex">
 			<div class="w-full flex flex-col gap-4">
 				{#each tokens as token (token.id)}
-					<div animate:flip={{ duration: 200 }}>
+					<div animate:flip={{ duration: 300 }} in:fly={{ duration: 300, x: 200 }}>
 						<Token {token} />
 					</div>
 				{/each}
