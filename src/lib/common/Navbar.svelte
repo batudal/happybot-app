@@ -5,8 +5,8 @@
 </script>
 
 <div class="flex flex-row justify-between w-full max-w-[1320px] box-content px-6 py-12">
-	<a href="/">
-		<img src="./logotype.svg" alt="Happybot Logo" />
+	<a href="/" draggable="false">
+		<img src="./logotype.svg" alt="Happybot Logo" draggable="false" />
 	</a>
 	<div class="flex flex-row gap-3">
 		<a href="https://t.me/happy_tg_bot" target="_blank" draggable="false">

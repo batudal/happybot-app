@@ -15,16 +15,19 @@
 		src="./badges/binance_badge.svg"
 		alt="Binance Smart Chain"
 		class="absolute top-[-24px] right-[164px] z-10 hover:rotate-3 hover:translate-x-[4px] hover:translate-y-[-4px] transition-all duration-200 ease-in-out"
+		draggable="false"
 	/>
 	<img
 		src="./badges/pancake_badge.svg"
 		alt="Binance Smart Chain"
 		class="absolute top-[-24px] right-[94px] z-10 hover:rotate-3 hover:translate-x-[4px] hover:translate-y-[-4px] transition-all duration-200 ease-in-out"
+		draggable="false"
 	/>
 	<img
 		src="./badges/telegram_badge.svg"
 		alt="Binance Smart Chain"
 		class="absolute top-[-24px] right-[24px] z-10 hover:rotate-3 hover:translate-x-[4px] hover:translate-y-[-4px] transition-all duration-200 ease-in-out"
+		draggable="false"
 	/>
 	<h1 class="text-5xl font-bold">
 		Painless Trading <br />on PancakeSwap

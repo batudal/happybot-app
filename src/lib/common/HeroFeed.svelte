@@ -41,7 +41,7 @@
 					<div class="blink w-[12px] h-[12px] rounded-full bg-happy-green" />
 					<p class="uppercase font-bold text-base text-happy-light">live feed</p>
 				</div>
-				<img src="./icons/binance_logotype.svg" alt="Binance" />
+				<img src="./icons/binance_logotype.svg" alt="Binance" draggable="false" />
 			</div>
 		</div>
 		<div class="p-6 pb-0 h-[436px] overflow-y-hidden flex">
