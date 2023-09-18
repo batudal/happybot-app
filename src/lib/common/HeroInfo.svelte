@@ -30,11 +30,12 @@
 		draggable="false"
 	/>
 	<h1 class="text-5xl font-bold">
-		Painless Trading <br />on PancakeSwap
+		Seamless Trading <br />on
+		<span class="underlined">PancakeSwap</span>
 	</h1>
 	<p class="text-2xl font-bold antialiased pt-8" style="letter-spacing: -0.075rem;">
-		The Happybot team places a strong emphasis on user experience, providing user-friendly design
-		that stands out from competitors in the market.
+		Happybot is a blazing fast telegram bot that aims to bolster your on-chain trading performance
+		by providing a streamlined experience.
 	</p>
 	<div class="absolute bottom-[-20px] right-[16px]">
 		<Button text="read introduction" />
