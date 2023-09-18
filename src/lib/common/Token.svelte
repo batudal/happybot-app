@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Tag from './Tag.svelte';
 	export let token: any;
-	$: if (token.token.name.length > 12) {
+	$: if (token && token.token && token.token.name && token.token.name.length > 12) {
 		token.token.name = token.token.name.slice(0, 12) + '...';
 	}
 </script>
