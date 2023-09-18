@@ -33,7 +33,7 @@
 		Painless Trading <br />on PancakeSwap
 	</h1>
 	<p class="text-2xl font-bold antialiased pt-8" style="letter-spacing: -0.075rem;">
-		The Happybot team places a strong emphasis on user experience, providing a user-friendly design
+		The Happybot team places a strong emphasis on user experience, providing user-friendly design
 		that stands out from competitors in the market.
 	</p>
 	<div class="absolute bottom-[-20px] right-[16px]">
