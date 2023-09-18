@@ -37,7 +37,10 @@
 		Happybot is a blazing fast telegram bot that aims to bolster your on-chain trading performance
 		by providing a streamlined experience.
 	</p>
-	<div class="absolute bottom-[-20px] right-[16px]">
+	<a
+		class="absolute bottom-[-20px] right-[16px]"
+		href="https://docs.happybot.lol/blog/introduction"
+	>
 		<Button text="read introduction" />
-	</div>
+	</a>
 </div>
