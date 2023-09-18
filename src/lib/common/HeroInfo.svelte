@@ -34,12 +34,13 @@
 		<span class="underlined">PancakeSwap</span>
 	</h1>
 	<p class="text-2xl font-bold antialiased pt-8" style="letter-spacing: -0.075rem;">
-		Happybot is a blazing fast telegram bot that aims to bolster your on-chain trading performance
-		by providing a streamlined experience.
+		Happybot is a blazing fast telegram bot that aims to bolster your on-chain trading experience by
+		providing a friendly, streamlined interface.
 	</p>
 	<a
 		class="absolute bottom-[-20px] right-[16px]"
 		href="https://docs.happybot.lol/blog/introduction"
+		draggable="false"
 	>
 		<Button text="read introduction" />
 	</a>
