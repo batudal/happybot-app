@@ -34,6 +34,7 @@ letter-spacing: -0.2rem;
 
 .blink {
   animation: blink 1.5s linear infinite;
+  
 }
 
 @keyframes blink {
@@ -58,12 +59,15 @@ letter-spacing: -0.2rem;
 	@keyframes floating-2 {
 		0% {
 			transform: translate(0, 0px);
+      transform:scale(1);
 		}
 		50% {
 			transform: translate(15px, -15px);
+      transform:scale(1.05);
 		}
 		100% {
 			transform: translate(0, -0px);
+      transform:scale(1);
 		}
 	}
 

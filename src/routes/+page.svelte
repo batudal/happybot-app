@@ -7,12 +7,14 @@
 	let y = 0;
 	let height = 0;
 	let view_height = 0;
+	let view_width = 0;
+	$: CLOUD_TRANSLATION = (view_width * 2) / 3;
 	let path = 0;
-	const CLOUD_TRANSLATION = 1200;
+	let transform_scale = 0;
 	$: moveClouds(y);
 	function moveClouds(y: number) {
 		let scaled = scale(y + view_height, view_height, height, 0, CLOUD_TRANSLATION);
-		console.log('Scaled:', scaled);
+		transform_scale = scaled;
 		if (scaled < CLOUD_TRANSLATION / 2) {
 			path = -scaled;
 		} else {
@@ -30,7 +32,7 @@
 	}
 </script>
 
-<svelte:window bind:innerHeight={view_height} bind:scrollY={y} />
+<svelte:window bind:innerHeight={view_height} bind:innerWidth={view_width} bind:scrollY={y} />
 <svelte:head>
 	<title>happybot</title>
 </svelte:head>
@@ -41,15 +43,15 @@
 	<img
 		src="./cloud.svg"
 		alt="Cloud"
-		class="floating fixed bottom-[160px]"
-		style={`left:0;left: ${path}px`}
+		class="floating fixed"
+		style={`left:0;left: ${path}px;bottom:160px;bottom: ${160 + transform_scale / 4}px`}
 		draggable="false"
 	/>
 	<img
 		src="./cloud_2.svg"
 		alt="Cloud"
-		class="floating-2 fixed bottom-[160px] right-0"
-		style={`right:0;right: ${path}px`}
+		class="floating-2 fixed"
+		style={`right:0;right: ${path}px;bottom:360px; bottom: ${360 - transform_scale / 4}px`}
 		draggable="false"
 	/>
 	<img
