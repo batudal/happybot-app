@@ -3,7 +3,6 @@
 	import LaunchWithHappy from '$lib/common/LaunchWithHappy.svelte';
 	import Marketing from '$lib/common/Marketing.svelte';
 	import Navbar from '$lib/common/Navbar.svelte';
-	import { onMount } from 'svelte';
 
 	let cloud: HTMLImageElement;
 	let cloud2: HTMLImageElement;
@@ -14,20 +13,13 @@
 	const CLOUD_TRANSLATION = 200;
 	$: moveClouds(y);
 	function moveClouds(y: number) {
-		console.log('y', y);
-		console.log('height', height);
 		let scaled = scale(y, 0, height, 0, CLOUD_TRANSLATION);
-		console.log('scaled', scaled);
 		if (y < height / 2) {
 			path = -scaled;
 		} else {
 			path = -(CLOUD_TRANSLATION - scaled);
 		}
 	}
-	onMount(() => {
-		console.log('mounted');
-		console.log('PATH', path);
-	});
 	function scale(
 		number: number,
 		inMin: number,
