@@ -4,16 +4,8 @@
 
 body {
   font-family: 'Space Mono', monospace;
-  overflow: hidden;
   user-select: none;
   background-color: #81CEE6;
-}
-
-.background {
-  background-image: url('./bg.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .underlined {
@@ -21,7 +13,7 @@ body {
   text-decoration-thickness: 12px;
   text-underline-offset: -4px;
   text-decoration-skip-ink: none;
-  text-decoration-color: #FFDD02;
+  text-decoration-color: #EBC28E;
 }
 
 h1{
@@ -50,3 +42,39 @@ letter-spacing: -0.2rem;
   brightness: 1.5;
   }
 }
+
+	.floating {
+		animation-name: floating;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+	}
+	.floating-2 {
+		animation-name: floating-2;
+		animation-duration: 6s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+	}
+	@keyframes floating-2 {
+		0% {
+			transform: translate(0, 0px);
+		}
+		50% {
+			transform: translate(15px, -15px);
+		}
+		100% {
+			transform: translate(0, -0px);
+		}
+	}
+
+	@keyframes floating {
+		0% {
+			transform: translate(0, 0px);
+		}
+		50% {
+			transform: translate(-15px, 15px);
+		}
+		100% {
+			transform: translate(0, -0px);
+		}
+	}

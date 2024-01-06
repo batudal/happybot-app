@@ -9,7 +9,7 @@ export default {
       colors: {
         happy: {
           dark: '#1E1E1E',
-          light: '#FFF6DC',
+          light: '#FFEFCE',
           yellow: '#FFDD02',
           yellow_dark: '#F4D400',
           black: '#000000',
@@ -19,7 +19,8 @@ export default {
           light_pink: '#F58B9F',
           light_green: '#C7FDA9',
           purple: '#9747FF',
-
+          blue: '#00A3FF',
+          scroll: '#EBC28E',
         },
       }
     },

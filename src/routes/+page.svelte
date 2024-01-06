@@ -1,22 +1,45 @@
 <script lang="ts">
-	import HeroFeed from '$lib/common/HeroFeed.svelte';
 	import HeroInfo from '$lib/common/HeroInfo.svelte';
+	import LaunchWithHappy from '$lib/common/LaunchWithHappy.svelte';
+	import Marketing from '$lib/common/Marketing.svelte';
 	import Navbar from '$lib/common/Navbar.svelte';
-	export let data: any;
 </script>
 
 <svelte:head>
 	<title>happybot</title>
 </svelte:head>
-<div
-	class="relative w-full background flex flex-col items-center overflow-y-scroll"
-	style="height:100vh; background-image: url('./bg.svg')"
->
+<div class="relative w-full bg-happy-light_blue flex flex-col items-center">
+	<img
+		src="./cloud.svg"
+		alt="Cloud"
+		class="floating fixed bottom-[160px] left-0"
+		draggable="false"
+	/>
+	<img
+		src="./cloud_2.svg"
+		alt="Cloud"
+		class="floating-2 fixed bottom-[160px] right-0"
+		draggable="false"
+	/>
+	<img
+		src="./bg_top_right.svg"
+		alt="Background"
+		class="absolute w-[435px] h-[243px] top-0 right-0"
+		draggable="false"
+	/>
+	<img
+		src="./bg_bottom_left.svg"
+		alt="Background"
+		class="absolute w-full max-w-[1435px] bottom-0 left-0"
+		draggable="false"
+	/>
 	<div class="py-8 w-full flex flex-col items-center">
 		<Navbar />
 	</div>
-	<div class="max-w-[1320px] w-full flex flex-col lg:flex-row items-center gap-14 pb-24">
+	<div class="w-full flex flex-col items-center gap-32">
 		<HeroInfo />
-		<HeroFeed latest_tokens={data.tokens} />
+		<Marketing />
+		<LaunchWithHappy />
+		<div class="h-[120px]" />
 	</div>
 </div>

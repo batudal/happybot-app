@@ -4,6 +4,7 @@
 	$: if (token && token.token && token.token.name && token.token.name.length > 12) {
 		token.token.name = token.token.name.slice(0, 12) + '...';
 	}
+	$: console.log(token);
 </script>
 
 <div class="flex">
