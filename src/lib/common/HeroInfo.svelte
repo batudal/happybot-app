@@ -17,18 +17,22 @@
 			class="absolute bottom-[-4px] left-[-4px]"
 			draggable="false"
 		/>
-		<img
-			src="./badges/ethereum_badge.svg"
-			alt="Binance Smart Chain"
-			class="absolute top-[-24px] right-[94px] z-10 hover:rotate-3 hover:translate-x-[4px] hover:translate-y-[-4px] transition-all duration-200 ease-in-out"
-			draggable="false"
-		/>
-		<img
-			src="./badges/scroll_badge.svg"
-			alt="Binance Smart Chain"
-			class="absolute top-[-24px] right-[24px] z-10 hover:rotate-3 hover:translate-x-[4px] hover:translate-y-[-4px] transition-all duration-200 ease-in-out"
-			draggable="false"
-		/>
+		<a href="https://ethereum.org/en/what-is-ethereum/" target="_blank">
+			<img
+				src="./badges/ethereum_badge.svg"
+				alt="Ethereum"
+				class="absolute top-[-24px] right-[94px] z-10 hover:rotate-3 hover:translate-x-[4px] hover:translate-y-[-4px] transition-all duration-200 ease-in-out"
+				draggable="false"
+			/>
+		</a>
+		<a href="https://scroll.io/story" target="_blank">
+			<img
+				src="./badges/scroll_badge.svg"
+				alt="Scroll Network"
+				class="absolute top-[-24px] right-[24px] z-10 hover:rotate-3 hover:translate-x-[4px] hover:translate-y-[-4px] transition-all duration-200 ease-in-out"
+				draggable="false"
+			/>
+		</a>
 		<div class="flex flex-row items-start gap-4 z-10">
 			<img src="./scroll_logo.svg" class="w-[132px] h-[132px] mt-[-8px]" alt="Scroll Network" />
 			<div class="flex flex-col">
