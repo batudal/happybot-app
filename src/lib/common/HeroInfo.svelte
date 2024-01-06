@@ -1,5 +1,6 @@
 <script>
 	import Button from './Button.svelte';
+	import Typewriter from 'svelte-typewriter';
 </script>
 
 <div class="flex relative" style="box-shadow: 0px 0px 250px 0px rgba(255, 221, 2, 0.50);">
@@ -31,13 +32,17 @@
 		<div class="flex flex-row items-start gap-8 z-10">
 			<img src="./scroll_logo.svg" class="w-[132px] h-[132px] mt-[-12px]" alt="Scroll Network" />
 			<div class="flex flex-col">
-				<h1 class="text-5xl font-bold">
-					Tierless Launchpad on
-					<span class="underlined">Scroll Network</span>
-				</h1>
+				<div class="text-5xl font-bold">
+					<Typewriter mode="loop" wordInterval={5000}>
+						<h1>Tierless Launchpad</h1>
+						<h1>MEV Provider</h1>
+						<h1>DEX Aggregator</h1>
+					</Typewriter>
+					for <span class="underlined">Scroll Network</span>
+				</div>
 				<p class="text-2xl font-bold antialiased pt-8" style="letter-spacing: -0.075rem;">
-					Happybot is a blazing fast telegram bot that aims to bolster your on-chain trading
-					performance by providing a friendly, streamlined interface.
+					Happybot is a blazing fast mev provider that aims to bolster your Scroll legacy by
+					providing a friendly, streamlined interface.
 				</p>
 			</div>
 		</div>

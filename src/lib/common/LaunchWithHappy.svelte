@@ -20,10 +20,11 @@
 	<div class="flex flex-col items-start max-w-[480px]">
 		<h1 class="text-5xl font-bold">
 			Launch on
-			<span class="underlined">Happy</span>
+			<span class="underlined">happybot</span>
 		</h1>
 		<p class="text-2xl font-bold antialiased pt-8" style="letter-spacing: -0.075rem;">
-			Don’t miss the chance and super-charge your IDO launch!
+			Launching on <span class="underlined">Scroll</span>? Apply for the HappyBot Launchpad for a
+			successful welcome to the ecosystem.
 		</p>
 	</div>
 	<a
