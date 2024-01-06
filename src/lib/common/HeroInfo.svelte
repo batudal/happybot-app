@@ -3,7 +3,7 @@
 	import Typewriter from 'svelte-typewriter';
 </script>
 
-<div class="flex relative" style="box-shadow: 0px 0px 250px 0px rgba(255, 221, 2, 0.50);">
+<div class="flex relative">
 	<div
 		class="absolute w-[800px] h-[464px] bottom-[-12px] right-[-12px] bg-happy-dark border-4 border-happy-black rounded-[24px] z-0"
 	/>
@@ -29,8 +29,8 @@
 			class="absolute top-[-24px] right-[24px] z-10 hover:rotate-3 hover:translate-x-[4px] hover:translate-y-[-4px] transition-all duration-200 ease-in-out"
 			draggable="false"
 		/>
-		<div class="flex flex-row items-start gap-8 z-10">
-			<img src="./scroll_logo.svg" class="w-[132px] h-[132px] mt-[-12px]" alt="Scroll Network" />
+		<div class="flex flex-row items-start gap-4 z-10">
+			<img src="./scroll_logo.svg" class="w-[132px] h-[132px] mt-[-8px]" alt="Scroll Network" />
 			<div class="flex flex-col">
 				<div class="text-5xl font-bold">
 					<Typewriter mode="loop" wordInterval={5000}>
@@ -49,6 +49,7 @@
 		<a
 			class="absolute bottom-[-20px] left-[16px]"
 			href="https://docs.happybot.lol/blog/introduction"
+			target="_blank"
 			draggable="false"
 		>
 			<Button text="read introduction" />

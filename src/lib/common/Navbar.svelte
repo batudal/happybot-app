@@ -15,7 +15,6 @@
 		<a href="https://x.com/happybotlol" target="_blank" draggable="false">
 			<IconButton image="./icons/twitter.svg" alt="Twitter" />
 		</a>
-
 		<a href="https://docs.happybot.lol" target="_blank" draggable="false">
 			<Button text="docs" />
 		</a>
