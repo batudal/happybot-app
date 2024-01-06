@@ -4,17 +4,16 @@
 	import Marketing from '$lib/common/Marketing.svelte';
 	import Navbar from '$lib/common/Navbar.svelte';
 
-	let cloud: HTMLImageElement;
-	let cloud2: HTMLImageElement;
 	let y = 0;
 	let height = 0;
-	let width = 0;
+	let view_height = 0;
 	let path = 0;
-	const CLOUD_TRANSLATION = 200;
+	const CLOUD_TRANSLATION = 1200;
 	$: moveClouds(y);
 	function moveClouds(y: number) {
-		let scaled = scale(y, 0, height, 0, CLOUD_TRANSLATION);
-		if (y < height / 2) {
+		let scaled = scale(y + view_height, view_height, height, 0, CLOUD_TRANSLATION);
+		console.log('Scaled:', scaled);
+		if (scaled < CLOUD_TRANSLATION / 2) {
 			path = -scaled;
 		} else {
 			path = -(CLOUD_TRANSLATION - scaled);
@@ -31,13 +30,15 @@
 	}
 </script>
 
-<svelte:window bind:innerHeight={height} bind:innerWidth={width} bind:scrollY={y} />
+<svelte:window bind:innerHeight={view_height} bind:scrollY={y} />
 <svelte:head>
 	<title>happybot</title>
 </svelte:head>
-<div class="relative w-full bg-happy-light_blue flex flex-col items-center">
+<div
+	bind:clientHeight={height}
+	class="relative w-full bg-happy-light_blue flex flex-col items-center"
+>
 	<img
-		bind:this={cloud}
 		src="./cloud.svg"
 		alt="Cloud"
 		class="floating fixed bottom-[160px]"
@@ -45,7 +46,6 @@
 		draggable="false"
 	/>
 	<img
-		bind:this={cloud2}
 		src="./cloud_2.svg"
 		alt="Cloud"
 		class="floating-2 fixed bottom-[160px] right-0"
