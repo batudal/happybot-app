@@ -4,7 +4,7 @@
 	>
 		<p class="font-bold text-base">HAPPYBOT© 2023</p>
 		<div class="flex flex-row items-center gap-2">
-			<div class="w-[10px] h-[10px] rounded-full bg-happy-green" />
+			<div class="w-[10px] h-[10px] rounded-full bg-happy-green blink" />
 			<p>ALL SYSTEMS ONLINE</p>
 		</div>
 	</div>

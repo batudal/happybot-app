@@ -34,7 +34,6 @@ letter-spacing: -0.2rem;
 
 .blink {
   animation: blink 1.5s linear infinite;
-  
 }
 
 @keyframes blink {

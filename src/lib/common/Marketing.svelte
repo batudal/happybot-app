@@ -31,7 +31,7 @@
 		<img
 			src="./card_bg_blue.svg"
 			alt="Green card background"
-			class="absolute bottom-0 right-0 z-20"
+			class="absolute bottom-0 right-0 z-10"
 			draggable="false"
 		/>
 		<MarketingMaterial />
