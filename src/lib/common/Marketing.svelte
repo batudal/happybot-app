@@ -27,7 +27,7 @@
 		class="absolute w-full max-h-[1200px] top-0"
 		draggable="false"
 	/>
-	<div class="relative">
+	<div class="relative w-full">
 		<img
 			src="./card_bg_blue.svg"
 			alt="Green card background"
@@ -36,12 +36,12 @@
 		/>
 		<MarketingMaterial />
 		<div
-			class="w-[1280px] h-[720px] border-4 border-happy-black rounded-[24px] box-border overflow-hidden"
+			class="w-full max-w-[1280px] max-h-[720px] border-4 border-happy-black rounded-[24px] box-border overflow-hidden"
 		>
 			<swiper-container bind:this={swiper_cont} speed="1000" loop="true" slides-per-view="1">
 				{#each images as image}
 					<swiper-slide>
-						<img src={image} alt="Wolf" />
+						<img src={image} alt="Wolf" class="w-full" />
 					</swiper-slide>
 				{/each}
 			</swiper-container>

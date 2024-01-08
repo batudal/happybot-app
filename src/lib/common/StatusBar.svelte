@@ -18,6 +18,5 @@
 		<span class="text-happy-scroll">N/A</span>
 		• BOT VOLUME(24HR): <span class="text-happy-scroll">N/A</span>
 		• GROSS VOLUME: <span class="text-happy-scroll">N/A</span>
-		• LATEST SCROLL BLOCK: <span class="text-happy-scroll">N/A</span>
 	</p>
 </div>
