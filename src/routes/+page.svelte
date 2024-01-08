@@ -66,7 +66,7 @@
 		class="absolute w-full max-w-[1435px] bottom-0 left-0"
 		draggable="false"
 	/>
-	<div class="py-8 w-full flex flex-col items-center">
+	<div class="py-8 w-full flex flex-col items-center box-border">
 		<Navbar />
 	</div>
 	<div class="w-full flex flex-col items-center gap-32">

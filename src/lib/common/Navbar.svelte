@@ -4,7 +4,7 @@
 	import LaunchingSoon from './LaunchingSoon.svelte';
 </script>
 
-<div class="flex flex-row justify-between w-full max-w-[1320px] box-content px-6 py-12">
+<div class="flex flex-row justify-between w-full box-border px-6 py-12">
 	<a href="/" draggable="false">
 		<img src="./logotype.svg" alt="Happybot Logo" draggable="false" />
 	</a>

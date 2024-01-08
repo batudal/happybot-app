@@ -27,7 +27,7 @@
 		class="absolute w-full max-h-[1200px] top-0"
 		draggable="false"
 	/>
-	<div class="relative w-full">
+	<div class="relative w-full max-w-[1280px]">
 		<img
 			src="./card_bg_blue.svg"
 			alt="Green card background"
